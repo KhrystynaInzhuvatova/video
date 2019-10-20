@@ -1,0 +1,7 @@
+<div id="users">
+<%= react_component("Index", users: @users), remote: true %>
+</div>
+<div id="current_user">
+  <%= react_component("CurrentUser", current: @current) %>
+</div>
+<button id= "p" class="btn btn-primary">Find Theatres around</button>

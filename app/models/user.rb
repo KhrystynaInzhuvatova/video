@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  after_update_commit { UserUpdateJob.perform_later(self) }
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable,  and :omniauthable
   devise :database_authenticatable, :registerable,

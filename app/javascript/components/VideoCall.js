@@ -137,11 +137,14 @@ class VideoCall extends React.Component {
 
    this.localStream.srcObject = null;
    consumer.subscriptions.subscriptions = [];
-   this.remoteVideoContainer.innerHTML = "";
+   this.remoteVideoContainer.innerHTML = null;
+   let localvideo =          document.getElementById(`local-video+${this.userId}`);
+   localvideo && localvideo.remove();
+   
    broadcastData({ type: LEAVE_CALL, from: this.userId });
   }
   removeUser(data){
-    let video =          document.getElementById(`remoteVideoContainer+${data.from}`);
+  let video =          document.getElementById(`remoteVideoContainer+${data.from}`);
   video && video.remove();
   let peers = this.pcPeers
   delete peers[data.from]

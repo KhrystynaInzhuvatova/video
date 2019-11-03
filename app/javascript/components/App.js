@@ -6,6 +6,7 @@ import PropTypes from "prop-types"
 class App extends React.Component {
   constructor(props){
     super(props);
+    console.log(props);
     this.state={
       users: this.props.data
     }
@@ -25,7 +26,7 @@ class App extends React.Component {
     }
 
     componentDidMount() {
-      document.getElementById("p").addEventListener('click', this.shoot);
+      //document.getElementById("p").addEventListener('click', this.shoot);
 
     }
 

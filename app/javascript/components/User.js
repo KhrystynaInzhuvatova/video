@@ -19,7 +19,7 @@ render () {
     }
     return (
       <React.Fragment>
-          <div className="col-sm-4">
+          <div className="col-sm-4" id={`user-${this.state.id}`}>
             <div className="card" style={divStyle}>
               <div className="card-body">
                 <div className="card-text">{String(this.state.online)}</div>

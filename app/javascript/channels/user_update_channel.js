@@ -1,17 +1,19 @@
 import consumer from "./consumer"
 
-consumer.subscriptions.create("UserUpdateChannel", {
+consumer.subscriptions.create({ channel: "UserUpdateChannel",
+  room_id: ""
+  }, {
   connected() {
     console.log("connection from user");
   },
 
   disconnected() {
-    // Called when the subscription has been terminated by the server
+    console.log("disconnected from user");
   },
 
   received(data) {
     console.log("received from user");
-    console.log(data.html);
+    console.log(data.room_id);
     $('#users').html(`${data.html}`);
   }
 });

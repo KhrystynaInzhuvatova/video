@@ -7,10 +7,10 @@ consumer.subscriptions.create( "CallChannel",{
   },
 
   disconnected() {
-    // Called when the subscription has been terminated by the server
+    console.log("disconnected");
   },
 
   received: function(data) {
-    
+    console.log(data);
   }
 });

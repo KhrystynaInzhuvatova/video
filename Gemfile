@@ -47,4 +47,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'devise'
 gem "react-rails", "~> 2.6"
-gem 'mini_racer'
+gem 'twilio-ruby', '~> 5.29.0'
+gem 'dotenv-rails'

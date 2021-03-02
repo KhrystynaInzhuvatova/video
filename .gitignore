@@ -24,6 +24,8 @@
 /public/assets
 .byebug_history
 .env
+ngrok
+ngrok-stable-linux-amd64.zip
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 

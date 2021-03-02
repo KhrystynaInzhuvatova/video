@@ -49,3 +49,4 @@ gem 'devise'
 gem "react-rails", "~> 2.6"
 gem 'twilio-ruby', '~> 5.29.0'
 gem 'dotenv-rails'
+gem 'devise-bootstrapped'

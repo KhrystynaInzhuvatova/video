@@ -6,4 +6,5 @@ class UsersController < ApplicationController
   def show
     render json: @user = User.find(params[:id]).online
   end
+
 end
